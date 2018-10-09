@@ -1,0 +1,8 @@
+wget https://github.com/kgretzky/evilginx2/releases/download/2.0.0/evilginx_linux_x86_2.0.0.zip
+unzip evilginx_linux_x86_2.0.0.zip
+chmod 700 ./install.sh
+sudo ./install.sh
+chmod 700 ./evilginx
+sudo kill $(sudo lsof -t -i:443)
+sudo kill $(sudo lsof -t -i:53)
+sudo ./evilginx
